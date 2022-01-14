@@ -11,10 +11,25 @@ body {
   color: #ffff;
 }
 body .landing {
-  border: 5px solid black;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   min-height: 45em;
   background-color: lightgray;
+  justify-content: center;
+}
+body .landing__text {
+  align-self: center;
+}
+body .landing p {
+  padding-top: 4em;
+  font-size: 4em;
+  font-weight: lighter;
+}
+body .landing h1 {
+  font-size: 4em;
+  padding-top: 2em;
+  padding-bottom: 0px;
 }
 body main {
   background-color: #252525;

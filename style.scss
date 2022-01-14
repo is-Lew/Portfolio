@@ -16,11 +16,30 @@ body {
   color: $textcolor;
 
   .landing {
-    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    
     text-align: center;
-
     min-height: 45em;
     background-color: $landingColor;
+    justify-content: center;
+
+    &__text {
+      align-self: center;
+      
+    }
+
+    p {
+      padding-top: 4em;
+      font-size: 4em;
+      font-weight: lighter;
+    }
+
+    h1 {
+      font-size: 4em;
+      padding-top: 2em;
+      padding-bottom: 0px;
+    }
   }
 
   main {
