@@ -1,4 +1,47 @@
+$backgroundColor: #252525;
+$landingColor: lightgray;
+$textcolor: #ffff;
+$fontstyle: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  display: grid;
+  height: 1vh;
+  width: 100%;
+  font-family: $fontstyle;
+  color: $textcolor;
+
+  .landing {
+    border: 5px solid black;
+    text-align: center;
+
+    min-height: 45em;
+    background-color: $landingColor;
+  }
+
+  main {
+    background-color: $backgroundColor;
+
+    .section1 {
+
+      display: grid;
+      min-width: 1vw;
+      grid-template-rows: 1fr 4fr 4fr 4fr 4fr ;
+      gap: 20px;
+      &__title {
+        padding: 2%;
+        text-align: center;
+        font-weight: lighter;
+      }
+
+      &__bold {
+        font-weight: bold;
+      }
+      
+    }
+  }
 }
