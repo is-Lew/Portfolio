@@ -7,7 +7,7 @@ body {
   display: grid;
   height: 1vh;
   width: 100%;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #ffff;
 }
 body .landing {
@@ -21,7 +21,7 @@ body .landing {
 body .landing__text {
   align-self: center;
 }
-body .landing p {
+body .landing__hello {
   padding-top: 4em;
   font-size: 4em;
   font-weight: lighter;
@@ -30,6 +30,10 @@ body .landing h1 {
   font-size: 4em;
   padding-top: 2em;
   padding-bottom: 0px;
+}
+body .landing__se {
+  font-weight: lighter;
+  font-size: 1.25em;
 }
 body main {
   background-color: #252525;

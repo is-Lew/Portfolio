@@ -1,7 +1,7 @@
 $backgroundColor: #252525;
 $landingColor: lightgray;
 $textcolor: #ffff;
-$fontstyle: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+$fontstyle: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 
 * {
   margin: 0;
@@ -18,7 +18,6 @@ body {
   .landing {
     display: flex;
     flex-direction: column;
-    
     text-align: center;
     min-height: 45em;
     background-color: $landingColor;
@@ -29,7 +28,7 @@ body {
       
     }
 
-    p {
+    &__hello {
       padding-top: 4em;
       font-size: 4em;
       font-weight: lighter;
@@ -39,6 +38,10 @@ body {
       font-size: 4em;
       padding-top: 2em;
       padding-bottom: 0px;
+    }
+    &__se {
+      font-weight: lighter;
+      font-size: 1.25em;
     }
   }
 
