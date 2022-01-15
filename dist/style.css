@@ -99,7 +99,8 @@ body main .section1 .section3__logos {
   width: 70px;
   border-radius: 3em;
 }
-body main .section1 .section3 .fab, body main .section1 .section3 .far {
+body main .section1 .section3 .fab,
+body main .section1 .section3 .far {
   padding: 19px;
   font-size: 1.8em;
 }
