@@ -57,6 +57,43 @@ body main .section1 img {
 body main .section1__bold {
   font-weight: bold;
 }
+body main .section1__description {
+  padding-left: 4%;
+}
 body main .section1__description h6 {
   font-size: 1.25em;
+}
+body main .section1 .section2 {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+body main .section1 .section2__title {
+  padding-top: 15%;
+  font-weight: lighter;
+  font-size: 1.25em;
+}
+body main .section1 .section2__bold {
+  font-weight: bold;
+}
+body main .section1 .section3__title {
+  padding-top: 15%;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 1.25em;
+}
+body main .section1 .section3__bold {
+  font-weight: bold;
+}
+body main .section1 .section3__links {
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+  padding: 8%;
+  text-align: center;
+}
+body main .section1 .section3__logos {
+  background-color: #333333;
+  height: 70px;
+  width: 70px;
+  border-radius: 3em;
 }
