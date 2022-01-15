@@ -104,3 +104,32 @@ body main .section1 .section3 .far {
   padding: 19px;
   font-size: 1.8em;
 }
+
+@media screen and (min-width: 550px) {
+  main .section1 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-areas: "title title" "proj1 proj2" "proj3 proj4" "about about" "logos logos";
+  }
+  main .section1__title {
+    grid-area: title;
+  }
+  main .section1 #proj1 {
+    grid-area: proj1;
+  }
+  main .section1 #proj2 {
+    grid-area: proj2;
+  }
+  main .section1 #proj3 {
+    grid-area: proj3;
+  }
+  main .section1 #proj4 {
+    grid-area: proj4;
+  }
+  main .section2 {
+    grid-area: about;
+  }
+  main .section3 {
+    grid-area: logos;
+  }
+}

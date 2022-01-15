@@ -122,3 +122,54 @@ body {
     }
   }
 }
+
+@media screen and (min-width: 550px) {
+
+  main {
+
+    .section1 {
+      
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+      grid-template-areas: 
+      "title title"
+      "proj1 proj2"
+      "proj3 proj4"
+      "about about"
+      "logos logos";
+
+      &__title {
+        grid-area: title;
+      }
+
+      #proj1 {
+        grid-area: proj1;
+      }
+      #proj2 {
+        grid-area: proj2;
+      }
+      #proj3 {
+        grid-area: proj3;
+      }
+      #proj4 {
+        grid-area: proj4;
+      }
+
+     
+    }
+
+    .section2 {
+      grid-area: about;
+    }
+
+    .section3 {
+      grid-area: logos ;
+      
+    }
+
+
+  }
+
+
+
+}
