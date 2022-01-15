@@ -73,6 +73,8 @@ body {
           font-size: $subHeading;
         }
       }
+
+    }
       .section2 {
         padding-left: 4%;
         padding-right: 4%;
@@ -119,57 +121,53 @@ body {
           font-size: 1.8em;
         }
       }
-    }
+
   }
 }
 
 @media screen and (min-width: 550px) {
 
-  main {
+  body {
 
-    .section1 {
-      
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
-      grid-template-areas: 
-      "title title"
-      "proj1 proj2"
-      "proj3 proj4"
-      "about about"
-      "logos logos";
+  
+    main {
 
-      &__title {
-        grid-area: title;
+      .section1 {        
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-areas: 
+        "title title"
+        "proj1 proj2"
+        "proj3 proj4";
+
+        &__title {
+          grid-area: title;
+        }
+
+        #proj1 {
+          grid-area: proj1;
+        }
+        #proj2 {
+          grid-area: proj2;
+        }
+        #proj3 {
+          grid-area: proj3;
+        }
+        #proj4 {
+          grid-area: proj4;
+        }
       }
 
-      #proj1 {
-        grid-area: proj1;
+      .section2 {
+        
+        &__title {
+          padding-top: 9%;
+        }
+        
       }
-      #proj2 {
-        grid-area: proj2;
-      }
-      #proj3 {
-        grid-area: proj3;
-      }
-      #proj4 {
-        grid-area: proj4;
-      }
-
-     
     }
-
-    .section2 {
-      grid-area: about;
-    }
-
-    .section3 {
-      grid-area: logos ;
-      
-    }
-
 
   }
-
 
 
 }
