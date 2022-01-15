@@ -13,7 +13,6 @@ $ellipsecolor: #333333;
 body {
   display: grid;
   height: 1vh;
-  width: 100%;
   font-family: $fontstyle;
   color: $textcolor;
 
@@ -77,6 +76,8 @@ body {
 
         padding-left: 4%;
         h6 {
+          padding-top: 2%;
+          padding-bottom: .5%;
           font-size: $subHeading;
            }
       }
@@ -87,6 +88,7 @@ body {
 
         &__title {
           padding-top: 15%;
+          padding-bottom: 2%;
           font-weight: lighter;
           font-size: $subHeading;
           
@@ -109,7 +111,7 @@ body {
 
         &__links { 
           display: flex;
-          gap: 5%;
+          gap: 10%;
           justify-content: center;
           padding: 8%;     
           text-align: center; 
@@ -122,6 +124,10 @@ body {
           width: 70px;
           border-radius: 3em;
           
+        }
+        .fab , .far {
+          padding: 19px;
+          font-size: 1.8em;
         }
       }
     }
