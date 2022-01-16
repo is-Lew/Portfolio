@@ -61,8 +61,15 @@ body .landing {
   flex-direction: column;
   text-align: center;
   min-height: 50em;
-  background-color: lightgray;
   justify-content: center;
+}
+body .landing__bg-img {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  filter: blur(3px);
+  z-index: -1;
 }
 body .landing__text {
   align-self: center;
@@ -71,15 +78,18 @@ body .landing__hello {
   padding-top: 4em;
   font-size: 4em;
   font-weight: lighter;
+  transition: 2s;
 }
 body .landing h1 {
   font-size: 4em;
   padding-top: 2em;
   padding-bottom: 0px;
+  transition: 2s;
 }
 body .landing__se {
   font-weight: lighter;
   font-size: 1.25em;
+  transition: 2s;
 }
 body main {
   background-color: #252525;
@@ -125,7 +135,7 @@ body main .section2__bold {
   font-weight: bold;
 }
 body main .section3__title {
-  padding-top: 15%;
+  padding-top: 10%;
   text-align: center;
   font-weight: lighter;
   font-size: 1.25em;
@@ -175,5 +185,8 @@ body main .section3 .far {
   }
   body main .section2__title {
     padding-top: 10%;
+  }
+  body .section3__title {
+    padding-top: 5%;
   }
 }

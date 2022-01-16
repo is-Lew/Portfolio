@@ -69,8 +69,17 @@ body {
     flex-direction: column;
     text-align: center;
     min-height: 50em;
-    background-color: $landingColor;
+    
     justify-content: center;
+
+    &__bg-img {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      filter: blur(3px);         
+      z-index: -1;
+    }
 
     &__text {
       align-self: center;
@@ -80,16 +89,19 @@ body {
       padding-top: 4em;
       font-size: 4em;
       font-weight: lighter;
+      transition: 2s;
     }
 
     h1 {
       font-size: 4em;
       padding-top: 2em;
       padding-bottom: 0px;
+      transition: 2s;
     }
     &__se {
       font-weight: lighter;
       font-size: $subHeading;
+      transition: 2s;
     }
   }
 
@@ -145,7 +157,7 @@ body {
       }
       .section3 {
         &__title {
-          padding-top: 15%;
+          padding-top: 10%;
           text-align: center;
           font-weight: lighter;
           font-size: $subHeading;
@@ -220,7 +232,14 @@ body {
       }
     }
 
-  }
+        .section3 {
 
+          &__title {
+
+            padding-top: 5%;
+          }
+        }
+
+  }
 
 }
