@@ -78,18 +78,15 @@ body .landing__hello {
   padding-top: 4em;
   font-size: 4em;
   font-weight: lighter;
-  transition: 2s;
 }
 body .landing h1 {
   font-size: 4em;
   padding-top: 2em;
   padding-bottom: 0px;
-  transition: 2s;
 }
 body .landing__se {
   font-weight: lighter;
   font-size: 1.25em;
-  transition: 2s;
 }
 body main {
   background-color: #252525;
