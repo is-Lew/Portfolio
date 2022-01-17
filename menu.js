@@ -10,5 +10,5 @@ jQuery(document).ready(function(){
 
 // .ready .click and .toggleclass are jQuery methods
 
-// .toggleClass toggle between using the active class 
+// .toggleClass toggle between using the normal menu active class and the active menu class
 
