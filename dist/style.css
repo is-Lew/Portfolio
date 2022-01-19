@@ -89,6 +89,28 @@ body .landing__se {
   font-weight: lighter;
   font-size: 1.25em;
 }
+body .landing__downArrow {
+  position: absolute;
+  bottom: 5vh;
+  text-align: center;
+  left: 47.5vw;
+  background: url("https://static1.squarespace.com/static/5e78f290575a6321739eba41/t/5ec8625c6dad0e25fa5a8234/1590190684880/Arrow.png");
+  height: 5vmax;
+  width: 5vmax;
+  background-size: 100% auto;
+  animation: bounce 2s linear infinite;
+}
+@keyframes bounce {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
 body main {
   background-color: #252525;
 }
@@ -186,6 +208,7 @@ body main .section3 .far {
   }
   body main .section1__title {
     grid-area: title;
+    font-size: 2em;
   }
   body main .section1 #proj1 {
     grid-area: proj1;
@@ -199,10 +222,18 @@ body main .section3 .far {
   body main .section1 #proj4 {
     grid-area: proj4;
   }
+  body main .section1__description h6 {
+    font-size: 1.6em;
+  }
   body main .section2__title {
     padding-top: 10%;
+    font-size: 2em;
   }
-  body .section3__title {
-    padding-top: 5%;
+  body main .section3__title {
+    padding-top: 7%;
+    font-size: 2em;
+  }
+  body main .section3__links {
+    padding: 5%;
   }
 }
