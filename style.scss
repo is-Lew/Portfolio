@@ -67,7 +67,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    min-height: 50em;
+    min-height: 40em;
 
     justify-content: center;
 
@@ -81,19 +81,20 @@ body {
     }
 
     &__text {
+      padding: 1%;
       align-self: center;
     }
 
     &__hello {
-      padding-top: 4em;
-      font-size: 4em;
+      padding-top: 2em;
+      font-size: $largeHeadingFontSize;
       font-weight: lighter;
       // transition: 2s;
     }
 
     h1 {
-      font-size: 4em;
-      padding-top: 2em;
+      font-size: $largeHeadingFontSize;
+      padding-top: 1em;
       padding-bottom: 0px;
       // transition: 2s;
     }
@@ -186,9 +187,38 @@ body {
     }
   }
 }
-
-@media screen and (min-width: 550px) {
+@media screen and (min-height: 750px) {
   body {
+     .landing {
+      min-height: 47em;
+    }
+  }
+
+}
+@media screen and (min-width: 550px) {
+  $subHeading: 2em; 
+  $largeHeadingFontSize: 5em;
+
+  nav {
+    .toggle {
+      font-size: $subHeading;
+    }
+  }
+
+  body {
+    
+    .landing {
+      &__hello {
+        font-size: $largeHeadingFontSize;        
+      }
+  
+      h1 {
+        font-size: $largeHeadingFontSize;
+      }
+      &__se {
+        font-size: $subHeading;
+      }
+    }
     main {
       .section1 {
         grid-template-columns: 1fr 1fr;
