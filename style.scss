@@ -57,6 +57,8 @@ nav {
   }
 }
 
+
+
 body {
   display: grid;
   height: 1vh;
@@ -67,7 +69,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    min-height: 50em;
+    min-height: 40em;
 
     justify-content: center;
 
@@ -81,19 +83,20 @@ body {
     }
 
     &__text {
+      padding: 1%;
       align-self: center;
     }
 
     &__hello {
-      padding-top: 4em;
-      font-size: 4em;
+      padding-top: 2em;
+      font-size: $largeHeadingFontSize;
       font-weight: lighter;
       // transition: 2s;
     }
 
     h1 {
-      font-size: 4em;
-      padding-top: 2em;
+      font-size: $largeHeadingFontSize;
+      padding-top: 1em;
       padding-bottom: 0px;
       // transition: 2s;
     }
@@ -101,6 +104,30 @@ body {
       font-weight: lighter;
       font-size: $subHeading;
       // transition: 2s;
+    }
+
+    &__downArrow {
+      position: absolute;
+      bottom: 5vh;
+      text-align: center;
+      left: 47.5vw;
+      background: url('https://static1.squarespace.com/static/5e78f290575a6321739eba41/t/5ec8625c6dad0e25fa5a8234/1590190684880/Arrow.png');
+      height: 5vmax;
+      width: 5vmax;
+      background-size: 100% auto;
+      animation: bounce 2s linear infinite;
+    }
+
+    @include keyframes(bounce) {
+      0% {
+        bottom: 0;
+      }
+      50% {
+        bottom: 20px;
+      }
+      100% {
+        bottom: 0;
+      }
     }
   }
 
@@ -186,9 +213,38 @@ body {
     }
   }
 }
-
-@media screen and (min-width: 550px) {
+@media screen and (min-height: 750px) {
   body {
+     .landing {
+      min-height: 47em;
+    }
+  }
+
+}
+@media screen and (min-width: 550px) {
+  $subHeading: 2em; 
+  $largeHeadingFontSize: 5em;
+
+  nav {
+    .toggle {
+      font-size: $subHeading;
+    }
+  }
+
+  body {
+    
+    .landing {
+      &__hello {
+        font-size: $largeHeadingFontSize;        
+      }
+  
+      h1 {
+        font-size: $largeHeadingFontSize;
+      }
+      &__se {
+        font-size: $subHeading;
+      }
+    }
     main {
       .section1 {
         grid-template-columns: 1fr 1fr;
@@ -200,6 +256,7 @@ body {
 
         &__title {
           grid-area: title;
+          font-size: $subHeading;
         }
 
         #proj1 {
@@ -214,19 +271,32 @@ body {
         #proj4 {
           grid-area: proj4;
         }
-      }
 
+        &__description {
+          h6 {
+            font-size: $subHeading*0.8;
+          }
+      }
+      
+      } 
       .section2 {
         &__title {
           padding-top: 10%;
+          font-size: $subHeading;
         }
       }
-    }
+    
+      .section3 {
+        &__title {
+         padding-top: 7%;
+          font-size: $subHeading;
+        
+        }
+        &__links {
+          padding: 5%;
+        }
 
-    .section3 {
-      &__title {
-        padding-top: 5%;
       }
-    }
   }
+}
 }

@@ -60,7 +60,7 @@ body .landing {
   display: flex;
   flex-direction: column;
   text-align: center;
-  min-height: 50em;
+  min-height: 40em;
   justify-content: center;
 }
 body .landing__bg-img {
@@ -72,21 +72,44 @@ body .landing__bg-img {
   z-index: -1;
 }
 body .landing__text {
+  padding: 1%;
   align-self: center;
 }
 body .landing__hello {
-  padding-top: 4em;
+  padding-top: 2em;
   font-size: 4em;
   font-weight: lighter;
 }
 body .landing h1 {
   font-size: 4em;
-  padding-top: 2em;
+  padding-top: 1em;
   padding-bottom: 0px;
 }
 body .landing__se {
   font-weight: lighter;
   font-size: 1.25em;
+}
+body .landing__downArrow {
+  position: absolute;
+  bottom: 5vh;
+  text-align: center;
+  left: 47.5vw;
+  background: url("https://static1.squarespace.com/static/5e78f290575a6321739eba41/t/5ec8625c6dad0e25fa5a8234/1590190684880/Arrow.png");
+  height: 5vmax;
+  width: 5vmax;
+  background-size: 100% auto;
+  animation: bounce 2s linear infinite;
+}
+@keyframes bounce {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 0;
+  }
 }
 body main {
   background-color: #252525;
@@ -159,7 +182,25 @@ body main .section3 .far {
   font-size: 1.8em;
 }
 
+@media screen and (min-height: 750px) {
+  body .landing {
+    min-height: 47em;
+  }
+}
 @media screen and (min-width: 550px) {
+  nav .toggle {
+    font-size: 2em;
+  }
+
+  body .landing__hello {
+    font-size: 5em;
+  }
+  body .landing h1 {
+    font-size: 5em;
+  }
+  body .landing__se {
+    font-size: 2em;
+  }
   body main .section1 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 2fr 2fr;
@@ -167,6 +208,7 @@ body main .section3 .far {
   }
   body main .section1__title {
     grid-area: title;
+    font-size: 2em;
   }
   body main .section1 #proj1 {
     grid-area: proj1;
@@ -180,10 +222,18 @@ body main .section3 .far {
   body main .section1 #proj4 {
     grid-area: proj4;
   }
+  body main .section1__description h6 {
+    font-size: 1.6em;
+  }
   body main .section2__title {
     padding-top: 10%;
+    font-size: 2em;
   }
-  body .section3__title {
-    padding-top: 5%;
+  body main .section3__title {
+    padding-top: 7%;
+    font-size: 2em;
+  }
+  body main .section3__links {
+    padding: 5%;
   }
 }
