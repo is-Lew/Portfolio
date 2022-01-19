@@ -1,8 +1,60 @@
-@use './variables' as *;
+@use "./variables" as *;
 
 * {
   margin: 0;
   padding: 0;
+}
+
+nav {
+  .toggle {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 2;
+    color: $textcolor;
+    cursor: pointer;
+    font-size: $subHeading;
+  }
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: $ellipsecolor;
+    z-index: 1;
+    transition: 0.5s;
+
+    a {
+      color: $textcolor;
+    }
+    ul {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      list-style: none;
+    }
+
+    ul li a {
+      padding: 10px;
+      display: inline-block;
+      font-size: $subHeading * 2;
+      text-decoration: none;
+      font-weight: lighter;
+      text-transform: uppercase;
+    }
+
+    ul li a:hover {
+      background: $backgroundColor;
+      border-radius: 20px;
+    }
+  }
+  .menu.active {
+    left: 0;
+    overflow: auto;
+  }
 }
 
 body {
@@ -16,8 +68,17 @@ body {
     flex-direction: column;
     text-align: center;
     min-height: 50em;
-    background-color: $landingColor;
+
     justify-content: center;
+
+    &__bg-img {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      filter: blur(3px);
+      z-index: -1;
+    }
 
     &__text {
       align-self: center;
@@ -27,16 +88,19 @@ body {
       padding-top: 4em;
       font-size: 4em;
       font-weight: lighter;
+      // transition: 2s;
     }
 
     h1 {
       font-size: 4em;
       padding-top: 2em;
       padding-bottom: 0px;
+      // transition: 2s;
     }
     &__se {
       font-weight: lighter;
       font-size: $subHeading;
+      // transition: 2s;
     }
   }
 
@@ -73,72 +137,66 @@ body {
           font-size: $subHeading;
         }
       }
-
     }
-      .section2 {
-        padding-left: 4%;
-        padding-right: 4%;
+    .section2 {
+      padding-left: 4%;
+      padding-right: 4%;
 
-        &__title {
-          padding-top: 15%;
-          padding-bottom: 2%;
-          font-weight: lighter;
-          font-size: $subHeading;
-        }
-
-        &__bold {
-          font-weight: bold;
-        }
-      }
-      .section3 {
-        &__title {
-          padding-top: 15%;
-          text-align: center;
-          font-weight: lighter;
-          font-size: $subHeading;
-        }
-        &__bold {
-          font-weight: bold;
-        }
-
-        &__links {
-          display: flex;
-          gap: 10%;
-          justify-content: center;
-          padding: 8%;
-          text-align: center;
-        }
-
-        &__logos {
-          background-color: $ellipsecolor;
-          height: 70px;
-          width: 70px;
-          border-radius: 3em;
-        }
-        .fab,
-        .far {
-          padding: 19px;
-          font-size: 1.8em;
-        }
+      &__title {
+        padding-top: 15%;
+        padding-bottom: 2%;
+        font-weight: lighter;
+        font-size: $subHeading;
       }
 
+      &__bold {
+        font-weight: bold;
+      }
+    }
+    .section3 {
+      &__title {
+        padding-top: 10%;
+        text-align: center;
+        font-weight: lighter;
+        font-size: $subHeading;
+      }
+      &__bold {
+        font-weight: bold;
+      }
+
+      &__links {
+        display: flex;
+        gap: 10%;
+        justify-content: center;
+        padding: 8%;
+        text-align: center;
+      }
+
+      &__logos {
+        background-color: $ellipsecolor;
+        height: 70px;
+        width: 70px;
+        border-radius: 3em;
+      }
+      .fab,
+      .far {
+        padding: 19px;
+        font-size: 1.8em;
+      }
+    }
   }
 }
 
 @media screen and (min-width: 550px) {
-
   body {
-
-  
     main {
-
-      .section1 {        
+      .section1 {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 2fr 2fr;
-        grid-template-areas: 
-        "title title"
-        "proj1 proj2"
-        "proj3 proj4";
+        grid-template-areas:
+          "title title"
+          "proj1 proj2"
+          "proj3 proj4";
 
         &__title {
           grid-area: title;
@@ -159,15 +217,16 @@ body {
       }
 
       .section2 {
-        
         &__title {
           padding-top: 10%;
         }
-        
       }
     }
 
+    .section3 {
+      &__title {
+        padding-top: 5%;
+      }
+    }
   }
-
-
 }
