@@ -1,0 +1,27 @@
+.section1 {
+  display: grid;
+  min-width: 1vw;
+  grid-template-rows: 1fr 2fr 4fr fr 4fr;
+  gap: 20px;
+}
+.section1__title {
+  padding-top: 15%;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 1.25em;
+}
+.section1 img {
+  width: 100%;
+  padding-top: 10%;
+}
+.section1__bold {
+  font-weight: bold;
+}
+.section1__description {
+  padding-left: 4%;
+}
+.section1__description h6 {
+  padding-top: 2%;
+  padding-bottom: 0.5%;
+  font-size: 1.25em;
+}

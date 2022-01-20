@@ -1,0 +1,13 @@
+.section2 {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+.section2__title {
+  padding-top: 15%;
+  padding-bottom: 2%;
+  font-weight: lighter;
+  font-size: 1.25em;
+}
+.section2__bold {
+  font-weight: bold;
+}
