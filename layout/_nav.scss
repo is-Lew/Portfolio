@@ -1,0 +1,53 @@
+@use "../variables" as *;
+
+nav {
+  .toggle {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 2;
+    color: $textcolor;
+    cursor: pointer;
+    font-size: $subHeading;
+  }
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: $ellipsecolor;
+    z-index: 1;
+    transition: 0.5s;
+
+    a {
+      color: $textcolor;
+    }
+    ul {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      list-style: none;
+    }
+
+    ul li a {
+      padding: 10px;
+      display: inline-block;
+      font-size: $subHeading * 2;
+      text-decoration: none;
+      font-weight: lighter;
+      text-transform: uppercase;
+    }
+
+    ul li a:hover {
+      background: $backgroundColor;
+      border-radius: 20px;
+    }
+  }
+  .menu.active {
+    left: 0;
+    overflow: auto;
+  }
+}

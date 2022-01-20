@@ -4,60 +4,7 @@
   margin: 0;
   padding: 0;
 }
-
-nav {
-  .toggle {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    z-index: 2;
-    color: $textcolor;
-    cursor: pointer;
-    font-size: $subHeading;
-  }
-  .menu {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: $ellipsecolor;
-    z-index: 1;
-    transition: 0.5s;
-
-    a {
-      color: $textcolor;
-    }
-    ul {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      list-style: none;
-    }
-
-    ul li a {
-      padding: 10px;
-      display: inline-block;
-      font-size: $subHeading * 2;
-      text-decoration: none;
-      font-weight: lighter;
-      text-transform: uppercase;
-    }
-
-    ul li a:hover {
-      background: $backgroundColor;
-      border-radius: 20px;
-    }
-  }
-  .menu.active {
-    left: 0;
-    overflow: auto;
-  }
-}
-
-
+@import "./layout/nav";
 
 body {
   display: grid;
@@ -65,163 +12,50 @@ body {
   font-family: $fontstyle;
   color: $textcolor;
 
-  .landing {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    min-height: 40em;
-
-    justify-content: center;
-
-    &__bg-img {
-      position: fixed;
-      height: 100%;
-      width: 100%;
-      background-size: cover;
-      filter: blur(3px);
-      z-index: -1;
-    }
-
-    &__text {
-      padding: 1%;
-      align-self: center;
-    }
-
-    &__hello {
-      padding-top: 2em;
-      font-size: $largeHeadingFontSize;
-      font-weight: lighter;
-      // transition: 2s;
-    }
-
-    h1 {
-      font-size: $largeHeadingFontSize;
-      padding-top: 1em;
-      padding-bottom: 0px;
-      // transition: 2s;
-    }
-    &__se {
-      font-weight: lighter;
-      font-size: $subHeading;
-      // transition: 2s;
-    }
-
-    &__downArrow {
-      position: absolute;
-      bottom: 5vh;
-      text-align: center;
-      left: 47.5vw;
-      background: url('https://static1.squarespace.com/static/5e78f290575a6321739eba41/t/5ec8625c6dad0e25fa5a8234/1590190684880/Arrow.png');
-      height: 5vmax;
-      width: 5vmax;
-      background-size: 100% auto;
-      animation: bounce 2s linear infinite;
-    }
-
-    @include keyframes(bounce) {
-      0% {
-        bottom: 0;
-      }
-      50% {
-        bottom: 20px;
-      }
-      100% {
-        bottom: 0;
-      }
-    }
-  }
+  @import "./layout/landing";
 
   main {
     background-color: $backgroundColor;
+  
+    @import "./layout/projectsSection";
+    
+    @import "./layout/aboutMeSection";
 
-    .section1 {
-      display: grid;
-      min-width: 1vw;
-      grid-template-rows: 1fr 2fr 4fr fr 4fr;
-      gap: 20px;
-
-      &__title {
-        padding-top: 15%;
-        text-align: center;
-        font-weight: lighter;
-        font-size: $subHeading;
-      }
-
-      img {
-        width: 100%;
-        padding-top: 10%;
-      }
-
-      &__bold {
-        font-weight: bold;
-      }
-
-      &__description {
-        padding-left: 4%;
-        h6 {
-          padding-top: 2%;
-          padding-bottom: 0.5%;
-          font-size: $subHeading;
-        }
-      }
-    }
-    .section2 {
-      padding-left: 4%;
-      padding-right: 4%;
-
-      &__title {
-        padding-top: 15%;
-        padding-bottom: 2%;
-        font-weight: lighter;
-        font-size: $subHeading;
-      }
-
-      &__bold {
-        font-weight: bold;
-      }
-    }
-    .section3 {
-      &__title {
-        padding-top: 10%;
-        text-align: center;
-        font-weight: lighter;
-        font-size: $subHeading;
-      }
-      &__bold {
-        font-weight: bold;
-      }
-
-      &__links {
-        display: flex;
-        gap: 10%;
-        justify-content: center;
-        padding: 8%;
-        text-align: center;
-      }
-
-      &__logos {
-        background-color: $ellipsecolor;
-        height: 70px;
-        width: 70px;
-        border-radius: 3em;
-      }
-      .fab,
-      .far {
-        padding: 19px;
-        font-size: 1.8em;
-      }
-    }
-  }
+    @import "./layout/getInTouchSection";
+  }  
 }
-@media screen and (min-height: 750px) {
+@media screen and (min-height: 735px) {
   body {
      .landing {
       min-height: 47em;
+
+      @keyframes bounce {
+        0% {
+          bottom: 18.5%;
+        }
+        50% {
+          bottom: 20%;
+        }
+        100% {
+          bottom: 18.5%;
+        }
+      }
     }
+  }
+}
+@media screen and (min-width: 550px) {
+  body {
+     .landing {
+        min-height: 47em;
+
+       &__downArrow {
+          display: none;
+       }
+      }
   }
 
 }
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 920px) {
   $subHeading: 2em; 
   $largeHeadingFontSize: 5em;
 
@@ -243,7 +77,23 @@ body {
       }
       &__se {
         font-size: $subHeading;
+      } 
+      &__downArrow {
+        right: 47.5%;
+        display: flex;
+      
       }
+      @keyframes bounce {
+        0% {
+          bottom: 18.5%;
+        }
+        50% {
+          bottom: 20%;
+        }
+        100% {
+          bottom: 18.5%;
+        }
+      }      
     }
     main {
       .section1 {

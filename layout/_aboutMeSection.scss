@@ -1,0 +1,17 @@
+@use "../variables" as *;
+
+.section2 {
+  padding-left: 4%;
+  padding-right: 4%;
+
+  &__title {
+    padding-top: 15%;
+    padding-bottom: 2%;
+    font-weight: lighter;
+    font-size: $subHeading;
+  }
+
+  &__bold {
+    font-weight: bold;
+  }
+}
