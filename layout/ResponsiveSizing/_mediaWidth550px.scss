@@ -1,0 +1,13 @@
+@use "../../variables" as *;
+
+@media screen and (min-width: 550px) {
+  body {
+    .landing {
+      min-height: 47em;
+
+      &__downArrow {
+        display: none;
+      }
+    }
+  }
+}

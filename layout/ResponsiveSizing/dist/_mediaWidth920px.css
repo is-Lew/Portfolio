@@ -1,0 +1,65 @@
+@media screen and (min-width: 920px) {
+  nav .toggle {
+    font-size: 2em;
+  }
+
+  body .landing__hello {
+    font-size: 5em;
+  }
+  body .landing h1 {
+    font-size: 5em;
+  }
+  body .landing__se {
+    font-size: 2em;
+  }
+  body .landing__downArrow {
+    right: 47.5%;
+    display: flex;
+  }
+  @keyframes bounce {
+    0% {
+      bottom: 18.5%;
+    }
+    50% {
+      bottom: 20%;
+    }
+    100% {
+      bottom: 18.5%;
+    }
+  }
+  body main .section1 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas: "title title" "proj1 proj2" "proj3 proj4";
+  }
+  body main .section1__title {
+    grid-area: title;
+    font-size: 2em;
+  }
+  body main .section1 #proj1 {
+    grid-area: proj1;
+  }
+  body main .section1 #proj2 {
+    grid-area: proj2;
+  }
+  body main .section1 #proj3 {
+    grid-area: proj3;
+  }
+  body main .section1 #proj4 {
+    grid-area: proj4;
+  }
+  body main .section1__description h6 {
+    font-size: 1.6em;
+  }
+  body main .section2__title {
+    padding-top: 10%;
+    font-size: 2em;
+  }
+  body main .section3__title {
+    padding-top: 7%;
+    font-size: 2em;
+  }
+  body main .section3__links {
+    padding: 5%;
+  }
+}
