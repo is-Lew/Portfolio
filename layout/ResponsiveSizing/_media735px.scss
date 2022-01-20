@@ -1,0 +1,21 @@
+@use "../../variables" as *;
+
+@media screen and (min-height: 735px) {
+  body {
+     .landing {
+      min-height: 47em;
+
+      @keyframes bounce {
+        0% {
+          bottom: 18.5%;
+        }
+        50% {
+          bottom: 20%;
+        }
+        100% {
+          bottom: 18.5%;
+        }
+      }
+    }
+  }
+}

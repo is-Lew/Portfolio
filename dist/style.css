@@ -187,6 +187,14 @@ body main .section3 a:link {
   color: #ffff;
 }
 
+@media screen and (min-width: 550px) {
+  body .landing {
+    min-height: 47em;
+  }
+  body .landing__downArrow {
+    display: none;
+  }
+}
 @media screen and (min-height: 735px) {
   body .landing {
     min-height: 47em;
@@ -201,14 +209,6 @@ body main .section3 a:link {
     100% {
       bottom: 18.5%;
     }
-  }
-}
-@media screen and (min-width: 550px) {
-  body .landing {
-    min-height: 47em;
-  }
-  body .landing__downArrow {
-    display: none;
   }
 }
 @media screen and (min-width: 920px) {
