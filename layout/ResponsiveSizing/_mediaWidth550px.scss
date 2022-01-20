@@ -2,13 +2,12 @@
 
 @media screen and (min-width: 550px) {
   body {
-     .landing {
-        min-height: 47em;
+    .landing {
+      min-height: 47em;
 
-       &__downArrow {
-          display: none;
-       }
+      &__downArrow {
+        display: none;
       }
+    }
   }
-
 }

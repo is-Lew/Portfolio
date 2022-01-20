@@ -1,7 +1,7 @@
 @use "../../variables" as *;
 
 @media screen and (min-width: 920px) {
-  $subHeading: 2em; 
+  $subHeading: 2em;
   $largeHeadingFontSize: 5em;
 
   nav {
@@ -11,22 +11,20 @@
   }
 
   body {
-    
     .landing {
       &__hello {
-        font-size: $largeHeadingFontSize;        
+        font-size: $largeHeadingFontSize;
       }
-  
+
       h1 {
         font-size: $largeHeadingFontSize;
       }
       &__se {
         font-size: $subHeading;
-      } 
+      }
       &__downArrow {
         right: 47.5%;
         display: flex;
-      
       }
       @keyframes bounce {
         0% {
@@ -38,7 +36,7 @@
         100% {
           bottom: 18.5%;
         }
-      }      
+      }
     }
     main {
       .section1 {
@@ -69,29 +67,26 @@
 
         &__description {
           h6 {
-            font-size: $subHeading*0.8;
+            font-size: $subHeading * 0.8;
           }
+        }
       }
-      
-      } 
       .section2 {
         &__title {
           padding-top: 10%;
           font-size: $subHeading;
         }
       }
-    
+
       .section3 {
         &__title {
-         padding-top: 7%;
+          padding-top: 7%;
           font-size: $subHeading;
-        
         }
         &__links {
           padding: 5%;
         }
-
       }
+    }
   }
-}
 }

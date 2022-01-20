@@ -16,18 +16,15 @@ body {
 
   main {
     background-color: $backgroundColor;
-  
+
     @import "./layout/projectsSection";
-    
+
     @import "./layout/aboutMeSection";
 
     @import "./layout/getInTouchSection";
-  }  
+  }
 }
 
 @import "./layout/ResponsiveSizing/mediaWidth550px";
 @import "./layout/ResponsiveSizing/media735px";
 @import "./layout/ResponsiveSizing/mediaWidth920px";
-
-
-

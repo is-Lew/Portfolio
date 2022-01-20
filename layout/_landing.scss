@@ -5,8 +5,6 @@
   flex-direction: column;
   text-align: center;
   min-height: 40em;
-  
-  
 
   justify-content: center;
 
@@ -17,7 +15,6 @@
     background-size: cover;
     filter: blur(3px);
     z-index: -1;
-    
   }
 
   &__text {
@@ -47,7 +44,7 @@
   &__downArrow {
     position: absolute;
     right: 44.5%;
-    background: url('https://static1.squarespace.com/static/5e78f290575a6321739eba41/t/5ec8625c6dad0e25fa5a8234/1590190684880/Arrow.png');
+    background: url("https://static1.squarespace.com/static/5e78f290575a6321739eba41/t/5ec8625c6dad0e25fa5a8234/1590190684880/Arrow.png");
     height: 5vmax;
     width: 5vmax;
     // vmax relates to max value of vh and vw i.e 1vmax on 1200 x 600 screen would be 12px 1vmin would be 6px
