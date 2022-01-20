@@ -174,10 +174,17 @@ body main .section3__logos {
   width: 70px;
   border-radius: 3em;
 }
+body main .section3__logos:hover {
+  background-color: lightgray;
+}
 body main .section3 .fab,
 body main .section3 .far {
   padding: 19px;
   font-size: 1.8em;
+}
+body main .section3 a:visited,
+body main .section3 a:link {
+  color: #ffff;
 }
 
 @media screen and (min-height: 735px) {

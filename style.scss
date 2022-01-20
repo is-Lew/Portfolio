@@ -136,29 +136,29 @@ body {
 
   main {
     background-color: $backgroundColor;
-
+  
     .section1 {
       display: grid;
       min-width: 1vw;
       grid-template-rows: 1fr 2fr 4fr fr 4fr;
       gap: 20px;
-
+  
       &__title {
         padding-top: 15%;
         text-align: center;
         font-weight: lighter;
         font-size: $subHeading;
       }
-
+  
       img {
         width: 100%;
         padding-top: 10%;
       }
-
+  
       &__bold {
         font-weight: bold;
       }
-
+  
       &__description {
         padding-left: 4%;
         h6 {
@@ -171,14 +171,14 @@ body {
     .section2 {
       padding-left: 4%;
       padding-right: 4%;
-
+  
       &__title {
         padding-top: 15%;
         padding-bottom: 2%;
         font-weight: lighter;
         font-size: $subHeading;
       }
-
+  
       &__bold {
         font-weight: bold;
       }
@@ -193,7 +193,7 @@ body {
       &__bold {
         font-weight: bold;
       }
-
+  
       &__links {
         display: flex;
         gap: 10%;
@@ -201,20 +201,27 @@ body {
         padding: 8%;
         text-align: center;
       }
-
+  
       &__logos {
         background-color: $ellipsecolor;
         height: 70px;
         width: 70px;
         border-radius: 3em;
       }
+      &__logos:hover {
+        background-color: lightgray;
+      }
       .fab,
       .far {
         padding: 19px;
         font-size: 1.8em;
       }
+      a:visited,
+      a:link {
+        color: $textcolor;
+      }
     }
-  }
+  }  
 }
 @media screen and (min-height: 735px) {
   body {
